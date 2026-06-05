@@ -1,0 +1,381 @@
+/* ==========================================
+   1. VARIABLES CSS Y CONFIGURACIÓN BASE (E4 & E7)
+   ========================================== */
+:root {
+    --bg-principal: #121212;       /* Negro azabache de fondo */
+    --bg-secundario: #1a1a1a;      /* Gris oscuro para tarjetas y secciones */
+    --color-acento: #c5a880;       /* Dorado/Café madera para detalles y botones */
+    --color-acento-hover: #b3946b; /* Dorado un poco más oscuro para efectos hover */
+    --texto-claro: #f5f5f5;        /* Blanco hueso para alta legibilidad */
+    --texto-mutado: #b3b3b3;       /* Gris claro para descripciones secundarias */
+    
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fuente-tamano-base: 16px;    /* Cumple estrictamente con el mínimo WCAG */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Hace que el salto de las anclas # sea suave */
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-claro);
+    font-family: var(--fuente-principal);
+    font-size: var(--fuente-tamano-base);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--color-acento);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+section {
+    padding: 5rem 2rem; /* Espaciado elegante entre secciones */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   2. HEADER Y NAVEGACIÓN (FLEXBOX)
+   ========================================== */
+header {
+    background-color: rgba(18, 18, 18, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-acento);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header .logo h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--color-acento);
+}
+
+/* ==========================================
+   3. SECCIÓN HERO (PORTADA)
+   ========================================== */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/hero-bg.jpg') no-repeat center center/cover;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--texto-claro);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: var(--texto-mutado);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.btn-cta {
+    background-color: var(--color-acento);
+    color: var(--bg-principal);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-acento-hover);
+}
+
+/* ==========================================
+   4. SOBRE NOSOTROS
+   ========================================== */
+#sobre-nosotros {
+    text-align: center;
+    max-width: 800px;
+}
+
+#sobre-nosotros p {
+    margin-bottom: 1.5rem;
+    color: var(--texto-mutated);
+}
+
+/* ==========================================
+   5. SECCIÓN SERVICIOS (FLEXBOX - E5)
+   ========================================== */
+#servicios {
+    background-color: var(--bg-secundario);
+    max-width: 100%;
+}
+
+.servicios-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicio-card {
+    background-color: var(--bg-principal);
+    border: 1px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-acento);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.servicio-card h3 {
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.servicio-card p {
+    padding: 0 1rem;
+    color: var(--texto-mutado);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   6. SECCIÓN TARIFAS Y HORARIOS (TABLAS)
+   ========================================== */
+.tablas-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+table {
+    flex: 1;
+    border-collapse: collapse;
+    background-color: var(--bg-secundario);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: var(--color-acento);
+    color: var(--bg-principal);
+    text-transform: uppercase;
+}
+
+.horarios {
+    flex: 1;
+    background-color: var(--bg-secundario);
+    padding: 2rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--color-acento);
+}
+
+.horarios ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.horarios ul li {
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================
+   7. SECCIÓN EQUIPO
+   ========================================== */
+.equipo-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.barbero-perfil {
+    flex: 1;
+    background-color: var(--bg-secundario);
+    padding: 2rem;
+    border-radius: 6px;
+    text-align: center;
+    border-top: 3px solid var(--color-acento);
+}
+
+/* ==========================================
+   8. SECCIÓN CONTACTO (FORMULARIO)
+   ========================================== */
+#contacto {
+    max-width: 600px;
+}
+
+#contacto p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--texto-mutado);
+}
+
+form {
+    background-color: var(--bg-secundario);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-acento);
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--bg-principal);
+    border: 1px solid #444;
+    color: var(--texto-claro);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#btn-enviar {
+    background-color: var(--color-acento);
+    color: var(--bg-principal);
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-enviar:hover {
+    background-color: var(--color-acento-hover);
+}
+
+.mensaje-alerta {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ==========================================
+   9. FOOTER
+   ========================================== */
+footer {
+    background-color: #0a0a0a;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid #222;
+    font-size: 0.9rem;
+    color: var(--texto-mutado);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================
+   10. DISEÑO RESPONSIVE (MEDIA QUERY MÍNIMO 768px - E6)
+   ========================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .servicios-container, 
+    .tablas-wrapper, 
+    .equipo-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    section {
+        padding: 3rem 1.5rem;
+    }
+}

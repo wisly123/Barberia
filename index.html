@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Urbana | Estilo y Tradición</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h2>Barbería Urbana</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Estilo y Tradición para el Hombre Moderno</h1>
+                <p>Mucho más que un corte de cabello. Una experiencia de relajación y cuidado personal.</p>
+                <a href="#contacto" class="btn-cta">Reserva tu Turno</a>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros">
+            <h2>Nuestra Historia</h2>
+            <p>Fundada en 2020, Barbería Urbana nace con el objetivo de rescatar la vieja escuela del cuidado masculino. Combinamos las técnicas clásicas de la barbería tradicional con las tendencias más modernas del diseño urbano.</p>
+            <p><strong>Nuestros Valores:</strong> Precisión, higiene, y atención al detalle en cada servicio.</p>
+        </section>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-container">
+                <article class="servicio-card">
+                    <img src="src/assets/1image.jpeg" alt="Barbero realizando un corte de cabello moderno de estilo degradado">
+                    <h3>Corte de Cabello</h3>
+                    <p>Corte personalizado según tu estilo y tipo de rostro. Incluye lavado y peinado con productos premium.</p>
+                </article>
+
+                <article class="servicio-card">
+                    <img src="src/assets/3image.jpeg" alt="Cliente recibiendo un perfilado de barba con navaja tradicional">
+                    <h3>Arreglo de Barba</h3>
+                    <p>Diseño y perfilado de barba con navaja. Hidratación profunda con aceites esenciales para la piel.</p>
+                </article>
+
+                <article class="servicio-card">
+                    <img src="src/assets/4image.jpeg" alt="Toalla caliente aplicada sobre el rostro de un cliente para ablandar la barba">
+                    <h3>Experiencia Suprema</h3>
+                    <p>Combo de corte y barba que incluye el ritual clásico de la toalla caliente para una máxima relajación.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="precios">
+            <h2>Tarifas y Horarios</h2>
+            
+            <div class="tablas-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Corte de Cabello Tradicional</td>
+                            <td>$15.000</td>
+                        </tr>
+                        <tr>
+                            <td>Perfilado y Recorte de Barba</td>
+                            <td>$10.000</td>
+                        </tr>
+                        <tr>
+                            <td>Experiencia Suprema (Corte + Barba + Toalla)</td>
+                            <td>$22.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="horarios">
+                    <h3>Horario de Atención</h3>
+                    <ul>
+                        <li><strong>Lunes a Viernes:</strong> 10:00 hrs - 20:00 hrs</li>
+                        <li><strong>Sábados:</strong> 09:00 hrs - 18:00 hrs</li>
+                        <li><strong>Domingos:</strong> Cerrado</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipo">
+            <h2>Barbería de Autor</h2>
+            <p>Conoce a los profesionales que se encargarán de tu estilo:</p>
+            <div class="equipo-container">
+                <div class="barbero-perfil">
+                    <h3>Wisly "The Master"</h3>
+                    <p>Especialista en cortes clásicos y afeitado tradicional a navaja con más de 10 años de experiencia.</p>
+                </div>
+                <div class="barbero-perfil">
+                    <h3>Piter Styles</h3>
+                    <p>Experto en degradados (fades) modernos, texturizados y tendencias de diseño urbano de última generación.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Reserva tu Turno Online</h2>
+            <p>Completa tus datos y nos pondremos en contacto para confirmar tu hora en minutos.</p>
+            
+            <form id="form-reserva">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ej: juan@correo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto / Servicio:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Ej: Reserva de hora para Corte">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Detalles adicionales (Opcional):</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos si prefieres un barbero en específico o alguna indicación..."></textarea>
+                </div>
+
+                <button type="submit" id="btn-enviar">Solicitar Reserva</button>
+                
+                <div id="form-mensaje" class="mensaje-alerta"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Barbería Urbana. Todos los derechos reservados.</p>
+            <p>Dirección: Av. Nueva Providencia #1234, Santiago, Chile.</p>
+            <p>Contacto: +56 9 75776951 | contactowislyjeanbaptiste45@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
